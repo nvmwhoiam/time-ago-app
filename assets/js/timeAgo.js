@@ -1,4 +1,4 @@
-function timeAgo(timestamp) {
+export function timeAgo(timestamp) {
     // Calculate the time elapsed since or until the given timestamp
     const currentDate = new Date();
     const timestampDate = new Date(timestamp);
@@ -57,14 +57,3 @@ function timeAgo(timestamp) {
     // Return the formatted string based on time direction
     return (suffix === 'ago') ? `${count} ${unit} ago` : `in ${count} ${unit}`;
 }
-
-// Usage examples
-console.log(timeAgo(new Date(Date.now() - 12000)));        // 12 seconds ago
-console.log(timeAgo(new Date(Date.now() + 180000)));       // in 3 minutes
-console.log(timeAgo(new Date(Date.now() + 7200000)));      // in 2 hours
-console.log(timeAgo(new Date(Date.now() - 259200000)));    // 3 days ago
-console.log(timeAgo(new Date(Date.now() - 14515200000)));  // 6 months ago
-console.log(timeAgo(new Date(Date.now() + 63158400000)));  // in 2 years
-
-console.log(timeAgo("2023-11-26T21:56:18Z"));              // 3 hours ago
-console.log(timeAgo("2023-11-28T21:56:18Z"));              // in 1 day
