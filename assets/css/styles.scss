@@ -1,0 +1,145 @@
+@import './general/base.scss';
+@import './general/mixin.scss';
+
+.main_container {
+    min-height: 100vh;
+    @include Dflex(center);
+}
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card {
+    background: var(--background-color-secondary);
+    border-radius: var(--border-radius-light);
+    padding: 1.5rem;
+}
+
+// Container
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+
+    h1 {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+        font-size: var(--font-size-xxxxlarge);
+    }
+}
+
+// Input Section
+.input-section {
+    background: var(--background-color-secondary);
+    border-radius: var(--border-radius-light);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+
+    .input-group {
+        margin-bottom: var(--spacing-lg);
+
+        label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-medium);
+        }
+
+        input {
+            width: 100%;
+            padding: var(--md-p);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-light);
+            font-size: var(--font-size-medium);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: border-color var(--animation-speed);
+
+            &:focus {
+                border-color: var(--accent-color);
+            }
+        }
+    }
+
+    .button_container {
+        @include Dflex(center);
+    }
+}
+
+// Result Section
+.result-section {
+    .result-card {
+        background: var(--background-color-secondary);
+        border-radius: var(--border-radius-light);
+        padding: var(--spacing-xl);
+        text-align: center;
+        box-shadow: 0 2px 10px var(--low-opacity);
+
+        h2 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-xlarge);
+        }
+
+        .result-text {
+            font-size: var(--font-size-large);
+            color: var(--accent-color);
+        }
+    }
+}
+
+// Examples Section
+.examples-section {
+    margin-top: var(--spacing-xl);
+
+    h2 {
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+        font-size: var(--font-size-xlarge);
+    }
+
+    .examples-grid {
+        @include grids(3, var(--spacing-md), var(--spacing-md));
+
+        @media (max-width: 600px) {
+            @include grids(2, var(--spacing-sm), var(--spacing-sm));
+        }
+
+        .example-btn {
+            @extend .btn_btn;
+            width: 100%;
+            text-align: center;
+            background-color: var(--background-color-secondary);
+
+            &:hover {
+                background-color: var(--background-color-secondary-hover);
+            }
+        }
+    }
+}
+
+// Accessibility
+:focus {
+    outline: 3px solid rgba(var(--accent-color), 0.5);
+    outline-offset: 2px;
+}
+
+// Animation
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--animation-speed) forwards;
+}
