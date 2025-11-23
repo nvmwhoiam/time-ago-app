@@ -1,35 +1,12 @@
+@import './general/root.css';
 @import './general/base.scss';
 @import './general/mixin.scss';
 
-.main_container {
-    min-height: 100vh;
-    @include Dflex(center);
-}
-
-// Mixins
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin card {
-    background: var(--background-color-secondary);
-    border-radius: var(--border-radius-light);
-    padding: 1.5rem;
-}
-
 // Container
-.container {
+.main_container {
     max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing-md);
-
-    h1 {
-        text-align: center;
-        margin-bottom: var(--spacing-xl);
-        font-size: var(--font-size-xxxxlarge);
-    }
 }
 
 // Input Section
@@ -85,8 +62,7 @@
         }
 
         .result-text {
-            font-size: var(--font-size-large);
-            color: var(--accent-color);
+            font-size: var(--font-size-2xlarge);
         }
     }
 }
@@ -119,6 +95,12 @@
             }
         }
     }
+}
+
+.header_container,
+.footer_container {
+    text-align: center;
+    padding: var(--xl-p) var(--md-p);
 }
 
 // Accessibility

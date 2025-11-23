@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/index.css">
     <meta name="description"
         content="Time Ago App shows human-readable time like '5 minutes ago' or 'in 2 hours.' Built with HTML, CSS & JS, it's fast, responsive, and easy to integrate.">
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-32x32.png">
-    <link rel="canonical" href="https://sadevworks.com/demo/time-ago-app/">
     <meta name="author" content="nvmwhoiam">
     <meta name="keywords"
-        content="time ago app, relative time calculator, human-readable time, real-time time difference, natural language time format, time since, time until, time difference tool, modern web application, time formatting, time display, time converter, time tracker, time in words, time ago calculator, time ago formatter, time ago UI, time ago web app, time ago tool, time ago generator, time ago display, time ago for developers, time ago for websites, time ago integration">
+        content="time ago app, relative time calculator, human-readable time, web utility app, date and time converter, JavaScript time app, real-time time difference">
 
-    <meta name="robots" content="index, follow">
-    <title>Modern Time Ago App | SADevWorks.com</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Human-Readable Time Ago Calculator & Formatter</title>
 </head>
 
 <body>
-    <main class="container">
-        <h1>Time Ago Calculator</h1>
+    <main class="main_container">
 
-        <section class="input-section">
+        <header class="header_container">
+            <h1>Time Ago Calculator</h1>
+        </header>
+
+        <div class="input-section">
             <form id="timeForm" aria-label="Time input form">
                 <div class="input-group">
                     <label for="dateTime">Select Date and Time:</label>
@@ -35,16 +37,16 @@
                     </button>
                 </div>
             </form>
-        </section>
+        </div>
 
-        <section class="result-section" aria-live="polite">
+        <div class="result-section" aria-live="polite">
             <div class="result-card">
                 <h2>Result</h2>
                 <p id="result" class="result-text">Enter a date and time to see the result</p>
             </div>
-        </section>
+        </div>
 
-        <section class="examples-section">
+        <div class="examples-section">
             <h2>Quick Examples</h2>
             <div class="examples-grid">
                 <button class="example-btn" data-time="-3600000">1 hour ago</button>
@@ -54,10 +56,19 @@
                 <button class="example-btn" data-time="-604800000">1 week ago</button>
                 <button class="example-btn" data-time="604800000">In 1 week</button>
             </div>
-        </section>
+        </div>
+
+        <footer class="footer_container">
+
+            <p class="footer_content">
+                Copyright &copy; 2025. All Rights Reserved | Powered By <a href="https://sadevworks.com" hreflang="en"
+                    aria-label="Home page">SADevWorks.com</a>
+            </p>
+
+        </footer>
     </main>
 
-    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
 </body>
 
 </html>
